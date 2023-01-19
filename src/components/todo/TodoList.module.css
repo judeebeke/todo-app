@@ -1,0 +1,146 @@
+.todoList {
+    display: flex;
+    flex-direction: column;
+    list-style: circle !important;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.todoList:hover {
+    background-color: rgb(33, 137, 235);
+}
+
+.todoList.selected{
+    background-color: rgb(33, 137, 235);
+}
+
+.todoList:hover h4 {
+    color: #ffffff;
+}
+
+.todoList.selected h4 {
+    color: #ffffff !important;
+}
+
+.todoList h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: blueviolet;
+}
+
+.todoList p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 0.5rem;
+    color: #141414;
+}
+
+.todoName, .todoActions{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    color: black;
+}
+
+.selected .todoActions{
+    color: aliceblue;
+}
+
+.todoListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg.deleteBtn{
+    display: none;
+    border: none;
+}
+
+svg.editBtn{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+svg.editBtn:hover {
+    font-size: 1.5rem;
+}
+
+svg.deleteBtn.show {
+    display: block;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+svg.deleteBtn.show:hover {
+    font-size: 1.5rem;
+}
+
+.check {
+    display: none;
+    border: black;
+    outline: none;
+}
+
+.todoList:hover .check {
+    display: block;
+}
+
+.check.show {
+    display: block;
+}
+
+.modalElement {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.modalElement h3 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.falseBtn {
+    background-color: rgb(160, 32, 32) !important;
+    margin-right: 1rem;
+}
+
+.trueBtn {
+    background-color: rgb(32, 160, 38) !important;
+}
+
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: 99%;
+}
+
+textarea {
+margin-bottom: 0.7rem;
+width: 99%;
+border-radius: 5px;
+border: none;
+padding: 1rem;
+font-size: 1rem;
+font-weight: 500;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+textarea:hover {
+    background-color: rgb(222, 236, 236);
+}
