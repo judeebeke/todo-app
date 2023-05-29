@@ -5,16 +5,8 @@ import classes from "./TodoList.module.css";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 
-//Testing Rate Star Component in other component
-import StarRating from "../UI/StarRating";
-import Star from "../../assets/Star";
-
-
-
-
 const TodoList = (props) => {
     const [checked, setChecked] = useState(false);
-    const [rateStar, setRateStar] = useState(Star);
     const [deleteModal, setDeleteModal] = useState(false);
     const [showEditModal, setShowEditModal] = useState({
     editId: "",
@@ -24,14 +16,6 @@ const TodoList = (props) => {
     title: "",
     desc: "",
   });
-
-  const setStarRatingHandler = (id) => {
-    setRateStar(
-        Star.map((item) => {
-        return item.id <= id ? { ...item, rate: true } : item;
-      })
-    );
-};
 
   const [removeDeleteBtn, setRemoveDeleteBtn] = useState("");
 
@@ -106,7 +90,6 @@ const TodoList = (props) => {
   };
 
   const titleHandler = (event) => {
-    // setInputError('')
     setInputData((prev) => {
       return { ...prev, title: event.target.value };
     });
@@ -165,15 +148,6 @@ const TodoList = (props) => {
               checked={checked}
             />
             <h4>{props.title}</h4>
-            {rateStar.map((item) => (
-            <StarRating
-            key={item.id}
-            rate={item.rate}
-            onStarChange={() => {
-                setStarRatingHandler(item.id);
-            }}
-            />
-        ))}
           </span>
           <span className={classes.todoActions}>
             {removeDeleteBtn > 1 ? (

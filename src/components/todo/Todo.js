@@ -133,6 +133,7 @@ const Todo = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    
     let todoTitle = event.target[0].value;
     let todoDesc = event.target[1].value;
 
